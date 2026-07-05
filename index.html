@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sougat Shekhar — Strategic Account Manager</title>
+<meta name="description" content="Sougat Shekhar — Strategic Account Manager. AI/ML, Process Excellence, Product Management, Data Analytics.">
+<style>
+  :root {
+    --ink: #111111;
+    --ink-soft: #555555;
+    --ink-faint: #999999;
+    --paper: #fafaf8;
+    --line: #e2e2de;
+    --accent: #111111;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--ink); color: var(--paper); }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250, 250, 248, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px; max-width: 880px; margin: 0 auto;
+  }
+  .mark { font-size: 1.15rem; letter-spacing: 0.02em; font-weight: 600; text-decoration: none; color: var(--ink); }
+  .mark span { margin-right: 8px; }
+  .nav-links a {
+    color: var(--ink-soft); text-decoration: none; font-size: 0.9rem;
+    margin-left: 22px; letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ---------- hero ---------- */
+  header.hero { padding: 110px 0 90px; border-bottom: 1px solid var(--line); }
+  .hero .glyph { font-size: 2rem; display: block; margin-bottom: 28px; animation: spin 24s linear infinite; width: fit-content; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+    font-weight: 700; letter-spacing: -0.02em; line-height: 1.12;
+  }
+  .hero .role {
+    margin-top: 18px; font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+    color: var(--ink-soft); font-weight: 400;
+  }
+  .hero .tags { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .tag {
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 6px 16px; font-size: 0.85rem; color: var(--ink-soft);
+    background: #ffffff;
+  }
+  .hero .cta { margin-top: 42px; }
+  .cta a {
+    display: inline-block; text-decoration: none;
+    border: 1px solid var(--ink); color: var(--ink);
+    padding: 12px 28px; border-radius: 999px; font-size: 0.95rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .cta a:hover { background: var(--ink); color: var(--paper); }
+  .cta a + a { margin-left: 12px; border-color: var(--line); color: var(--ink-soft); }
+  .cta a + a:hover { background: transparent; border-color: var(--ink); color: var(--ink); }
+
+  /* ---------- sections ---------- */
+  section { padding: 90px 0; border-bottom: 1px solid var(--line); }
+  .kicker {
+    font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 18px;
+  }
+  .kicker::before { content: "✲  "; }
+  section h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); letter-spacing: -0.01em; margin-bottom: 28px; }
+  section p.lede { color: var(--ink-soft); max-width: 620px; font-size: 1.05rem; }
+
+  /* ---------- expertise grid ---------- */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 40px; }
+  .card {
+    background: #ffffff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 28px 26px; transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(17,17,17,0.07); }
+  .card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+  .card p { font-size: 0.92rem; color: var(--ink-soft); }
+  .card .num { font-size: 0.78rem; color: var(--ink-faint); letter-spacing: 0.12em; display: block; margin-bottom: 14px; }
+
+  /* ---------- work ---------- */
+  .work-item {
+    display: block; text-decoration: none; color: inherit;
+    border: 1px solid var(--line); border-radius: 14px; background: #ffffff;
+    padding: 30px 28px; margin-top: 18px;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .work-item:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(17,17,17,0.07); }
+  .work-item .wi-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .work-item h3 { font-size: 1.15rem; }
+  .work-item .wi-tag { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
+  .work-item p { margin-top: 10px; font-size: 0.95rem; color: var(--ink-soft); max-width: 640px; }
+
+  /* ---------- contact ---------- */
+  #contact { border-bottom: none; padding-bottom: 70px; }
+  .contact-links { margin-top: 34px; display: flex; flex-direction: column; gap: 14px; }
+  .contact-links a {
+    color: var(--ink); text-decoration: none; font-size: 1.15rem; width: fit-content;
+    border-bottom: 1px solid var(--line); padding-bottom: 3px;
+    transition: border-color 0.2s;
+  }
+  .contact-links a:hover { border-color: var(--ink); }
+  .contact-links .label { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: -6px; }
+
+  footer {
+    padding: 30px 0 44px; color: var(--ink-faint); font-size: 0.85rem;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 560px) {
+    .nav-links a { margin-left: 14px; font-size: 0.82rem; }
+    header.hero { padding: 70px 0 60px; }
+    section { padding: 64px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="mark" href="#top"><span>✲</span>SS</a>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#expertise">expertise</a>
+      <a href="#work">work</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+  <header class="hero">
+    <span class="glyph">✲</span>
+    <h1>Sougat Shekhar</h1>
+    <p class="role">Strategic Account Manager — turning client relationships into growth engines with data, process, and product thinking.</p>
+    <div class="tags">
+      <span class="tag">AI / ML</span>
+      <span class="tag">Process Excellence</span>
+      <span class="tag">Product Management</span>
+      <span class="tag">Data Analytics</span>
+    </div>
+    <div class="cta">
+      <a href="#contact">Get in touch</a>
+      <a href="#work">See my work</a>
+    </div>
+  </header>
+
+  <section id="about" class="reveal">
+    <p class="kicker">About</p>
+    <h2>Strategy at the intersection of people and data.</h2>
+    <p class="lede">
+      I manage strategic accounts end to end — building trusted client relationships, finding
+      the signal in the data, and driving the process improvements that turn good delivery
+      into lasting partnerships. I bring an analytical, product-minded approach to account
+      growth: understand deeply, measure honestly, improve continuously.
+    </p>
+  </section>
+
+  <section id="expertise" class="reveal">
+    <p class="kicker">Expertise</p>
+    <h2>What I bring to the table.</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>AI / ML</h3>
+        <p>Applying machine learning and AI tooling to real business problems — from opportunity sizing to automating the repetitive so teams focus on the strategic.</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>Process Excellence</h3>
+        <p>Mapping, measuring, and redesigning workflows to remove friction — continuous improvement that shows up in the numbers, not just the slide decks.</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>Product Management</h3>
+        <p>Translating client needs into roadmaps and requirements — prioritising ruthlessly, shipping iteratively, and closing the loop with feedback.</p>
+      </div>
+      <div class="card">
+        <span class="num">04</span>
+        <h3>Data Analytics</h3>
+        <p>Building the dashboards and analyses that make decisions obvious — account health, revenue trends, and the early-warning signals that matter.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="reveal">
+    <p class="kicker">Selected Work</p>
+    <h2>Highlights &amp; case studies.</h2>
+    <p class="lede">A snapshot of the kind of impact I focus on. (Detailed case studies available on request.)</p>
+
+    <div class="work-item">
+      <div class="wi-top">
+        <h3>Account growth through data-led QBRs</h3>
+        <span class="wi-tag">Account Strategy</span>
+      </div>
+      <p>Reframed quarterly business reviews around outcome metrics instead of activity reports — turning renewals into expansion conversations.</p>
+    </div>
+
+    <div class="work-item">
+      <div class="wi-top">
+        <h3>Process excellence programme</h3>
+        <span class="wi-tag">Operations</span>
+      </div>
+      <p>Led end-to-end mapping of client-facing workflows, eliminating handoff delays and cutting turnaround time on key deliverables.</p>
+    </div>
+
+    <div class="work-item">
+      <div class="wi-top">
+        <h3>AI-assisted account intelligence</h3>
+        <span class="wi-tag">AI / Analytics</span>
+      </div>
+      <p>Introduced AI tooling to surface account health signals early — consolidating scattered data into a single view the whole team acts on.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <p class="kicker">Contact</p>
+    <h2>Let's talk.</h2>
+    <p class="lede">Open to conversations about strategic accounts, process, product, and where AI genuinely helps.</p>
+    <div class="contact-links">
+      <span class="label">Email</span>
+      <a href="mailto:sougatshekhar97@gmail.com">sougatshekhar97@gmail.com</a>
+      <span class="label">GitHub</span>
+      <a href="https://github.com/sougatshekhar97-cpu" target="_blank" rel="noopener">github.com/sougatshekhar97-cpu</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Sougat Shekhar</span>
+    <span>✲ built with intent</span>
+  </footer>
+
+</div>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
