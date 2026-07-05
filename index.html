@@ -110,6 +110,17 @@
   .work-item .wi-tag { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
   .work-item p { margin-top: 10px; font-size: 0.95rem; color: var(--ink-soft); max-width: 640px; }
 
+  /* ---------- agents ---------- */
+  .agent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 40px; }
+  a.card { display: block; text-decoration: none; color: inherit; }
+  .card .fw {
+    display: inline-block; margin-top: 14px; font-size: 0.75rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint);
+    border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px;
+  }
+  .attribution { margin-top: 34px; font-size: 0.85rem; color: var(--ink-faint); }
+  .attribution a { color: var(--ink-soft); }
+
   /* ---------- contact ---------- */
   #contact { border-bottom: none; padding-bottom: 70px; }
   .contact-links { margin-top: 34px; display: flex; flex-direction: column; gap: 14px; }
@@ -146,6 +157,7 @@
       <a href="#about">about</a>
       <a href="#expertise">expertise</a>
       <a href="#work">work</a>
+      <a href="#agents">ai agents</a>
       <a href="#contact">contact</a>
     </div>
   </div>
@@ -235,6 +247,77 @@
       </div>
       <p>Introduced AI tooling to surface account health signals early — consolidating scattered data into a single view the whole team acts on.</p>
     </div>
+  </section>
+
+  <section id="agents" class="reveal">
+    <p class="kicker">AI Agent Toolkit</p>
+    <h2>Agents I put to work.</h2>
+    <p class="lede">
+      A curated set of open-source AI agents I explore and apply to account management —
+      from lead prioritisation to client analytics. Each card links to the original project.
+    </p>
+
+    <div class="agent-grid">
+      <a class="card" href="https://github.com/crewAIInc/crewAI-examples/tree/main/flows/lead-score-flow" target="_blank" rel="noopener">
+        <span class="num">Account Strategy</span>
+        <h3>Lead Score Flow</h3>
+        <p>Scores and prioritises leads so outreach effort goes where the growth is.</p>
+        <span class="fw">CrewAI</span>
+      </a>
+      <a class="card" href="https://github.com/crewAIInc/crewAI-examples/tree/main/crews/marketing_strategy" target="_blank" rel="noopener">
+        <span class="num">Account Strategy</span>
+        <h3>Marketing Strategy Generator</h3>
+        <p>Builds growth strategies from market-trend analysis — faster account planning.</p>
+        <span class="fw">CrewAI</span>
+      </a>
+      <a class="card" href="https://github.com/agno-agi/agno/blob/main/cookbook/examples/agents/research_agent.py" target="_blank" rel="noopener">
+        <span class="num">Account Research</span>
+        <h3>Research Agent</h3>
+        <p>Deep, structured investigations — pre-meeting intelligence in minutes, not hours.</p>
+        <span class="fw">Agno</span>
+      </a>
+      <a class="card" href="https://github.com/langchain-ai/langgraph/blob/main/docs/docs/tutorials/customer-support/customer-support.ipynb" target="_blank" rel="noopener">
+        <span class="num">Client Experience</span>
+        <h3>Customer Support Agent</h3>
+        <p>Graph-based agent that handles client inquiries consistently, around the clock.</p>
+        <span class="fw">LangGraph</span>
+      </a>
+      <a class="card" href="https://github.com/crewAIInc/crewAI-examples/tree/main/flows/email_auto_responder_flow" target="_blank" rel="noopener">
+        <span class="num">Process Excellence</span>
+        <h3>Email Auto Responder</h3>
+        <p>Automates routine email responses — takes inbox triage off the team's plate.</p>
+        <span class="fw">CrewAI</span>
+      </a>
+      <a class="card" href="https://github.com/crewAIInc/crewAI-examples/tree/main/flows/meeting_assistant_flow" target="_blank" rel="noopener">
+        <span class="num">Process Excellence</span>
+        <h3>Meeting Assistant Flow</h3>
+        <p>Scheduling and agenda prep automated — every QBR consistently prepared.</p>
+        <span class="fw">CrewAI</span>
+      </a>
+      <a class="card" href="https://github.com/langchain-ai/langgraph/blob/main/docs/docs/tutorials/sql-agent.ipynb" target="_blank" rel="noopener">
+        <span class="num">Data Analytics</span>
+        <h3>Natural Language → SQL</h3>
+        <p>Plain-English questions over account databases — insight without the BI queue.</p>
+        <span class="fw">LangGraph</span>
+      </a>
+      <a class="card" href="https://microsoft.github.io/autogen/0.2/docs/notebooks/agentchat_groupchat_vis" target="_blank" rel="noopener">
+        <span class="num">Data Analytics</span>
+        <h3>Data Visualization Agents</h3>
+        <p>Multi-agent collaboration that turns raw account data into review-ready visuals.</p>
+        <span class="fw">AutoGen</span>
+      </a>
+      <a class="card" href="https://github.com/agno-agi/agno/blob/main/cookbook/examples/agents/media_trend_analysis_agent.py" target="_blank" rel="noopener">
+        <span class="num">Market Intelligence</span>
+        <h3>Media Trend Analysis</h3>
+        <p>Surfaces emerging trends early — fuel for proactive client conversations.</p>
+        <span class="fw">Agno</span>
+      </a>
+    </div>
+
+    <p class="attribution">
+      Full curated list with notes: <a href="https://github.com/sougatshekhar97-cpu/ai-agent-toolkit" target="_blank" rel="noopener">github.com/sougatshekhar97-cpu/ai-agent-toolkit</a>
+      &nbsp;·&nbsp; sourced from <a href="https://github.com/ashishpatel26/500-AI-Agents-Projects" target="_blank" rel="noopener">500-AI-Agents-Projects</a> — each agent belongs to its original authors.
+    </p>
   </section>
 
   <section id="contact" class="reveal">
