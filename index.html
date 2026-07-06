@@ -3,332 +3,583 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sougat Shekhar Hota — SOUGAT-1</title>
-<meta name="description" content="Sougat Shekhar Hota — enterprise account manager shipping toward Product Management and Process Excellence. ₹384 Mn portfolio, AI in production.">
+<title>Sougat Shekhar Hota — Strategic Account Manager</title>
+<meta name="description" content="Sougat Shekhar Hota — Strategic Account Manager in Mumbai. ₹384 Mn enterprise portfolio, AI in production, Lean Six Sigma. Open to Product Management, Process Excellence and Partner roles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: linear-gradient(180deg, #ffffff, #e9eef6) fixed; }
-  ::selection { background: #1f3d7a; color: #f7f8fa; }
-  @keyframes pulseDot { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
-  [data-hidden="true"] { display: none; }
-  @media (max-width: 960px) {
-    .g4, .g3 { grid-template-columns: 1fr 1fr !important; }
-    .g2w { grid-template-columns: 1fr !important; }
+  :root {
+    --navy: #0b2239;
+    --ink: #14283c;
+    --slate: #52667c;
+    --mist: #8fa3b5;
+    --azure: #2c7da0;
+    --turq: #61a5c2;
+    --sand: #f7f6f2;
+    --white: #ffffff;
+    --line: rgba(11,34,57,0.12);
   }
-  @media (max-width: 640px) {
-    .g4, .g3, .g2 { grid-template-columns: 1fr !important; }
-    .nav-links { display: none !important; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--sand); color: var(--ink);
+    font-family: 'Jost', sans-serif; font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--azure); color: #fff; }
+  [data-hidden="true"] { display: none; }
+  h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+  a { transition: color .3s, background .3s, border-color .3s, opacity .3s; }
+  img { max-width: 100%; }
+
+  /* ---------- eyebrow labels ---------- */
+  .eyebrow {
+    font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+    letter-spacing: 0.34em; text-transform: uppercase; color: var(--azure);
+  }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 90;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 48px; transition: background .45s, box-shadow .45s, padding .45s;
+    color: #fff;
+  }
+  nav.scrolled { background: rgba(11,34,57,0.96); box-shadow: 0 8px 30px rgba(11,34,57,0.25); padding: 14px 48px; }
+  .brand { font-family: 'Cormorant Garamond', serif; font-size: 21px; letter-spacing: 0.12em; color: #fff; text-decoration: none; text-transform: uppercase; }
+  .brand span { color: var(--turq); }
+  .nav-links { display: flex; align-items: center; gap: 34px; font-size: 12.5px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; }
+  .nav-links > a, .nav-drop > button {
+    color: rgba(255,255,255,0.85); text-decoration: none; background: none; border: 0;
+    font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer;
+    padding: 6px 0; position: relative;
+  }
+  .nav-links > a::after, .nav-drop > button::after {
+    content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1px;
+    background: var(--turq); transition: width .35s;
+  }
+  .nav-links > a:hover::after, .nav-drop > button:hover::after { width: 100%; }
+  .nav-links > a:hover, .nav-drop > button:hover { color: #fff; }
+  .nav-cta {
+    border: 1px solid rgba(255,255,255,0.55) !important; padding: 10px 22px !important; border-radius: 999px;
+  }
+  .nav-cta:hover { background: #fff; color: var(--navy) !important; }
+  .nav-cta::after { display: none; }
+
+  /* nav dropdown */
+  .nav-drop { position: relative; }
+  .nav-drop-menu {
+    position: absolute; top: calc(100% + 14px); left: 50%; transform: translate(-50%, 8px);
+    background: #fff; color: var(--ink); border-radius: 12px; padding: 10px;
+    min-width: 230px; box-shadow: 0 24px 60px rgba(11,34,57,0.28);
+    opacity: 0; visibility: hidden; transition: opacity .3s, transform .3s, visibility .3s;
+  }
+  .nav-drop:hover .nav-drop-menu, .nav-drop:focus-within .nav-drop-menu {
+    opacity: 1; visibility: visible; transform: translate(-50%, 0);
+  }
+  .nav-drop-menu a {
+    display: block; padding: 11px 16px; border-radius: 8px; text-decoration: none;
+    color: var(--ink); font-size: 12px; letter-spacing: 0.18em;
+  }
+  .nav-drop-menu a:hover { background: var(--sand); color: var(--azure); }
+
+  /* ---------- hero ---------- */
+  header.hero {
+    min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 140px 24px 90px; position: relative; overflow: hidden; color: #fff;
+    background:
+      radial-gradient(120% 90% at 80% 10%, rgba(97,165,194,0.35), transparent 55%),
+      radial-gradient(100% 80% at 15% 90%, rgba(44,125,160,0.45), transparent 60%),
+      linear-gradient(175deg, #0b2239 0%, #133a57 48%, #1d5a7a 100%);
+  }
+  header.hero::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(70% 45% at 50% 108%, rgba(247,246,242,0.28), transparent 70%);
+  }
+  .hero-inner { max-width: 900px; position: relative; z-index: 1; }
+  .hero .eyebrow { color: var(--turq); animation: rise 1s .1s both; }
+  .hero h1 {
+    margin: 26px 0; font-size: clamp(54px, 9vw, 118px); font-weight: 600; line-height: 1.02;
+    letter-spacing: 0.01em; animation: rise 1s .25s both;
+  }
+  .hero p.sub {
+    margin: 0 auto; max-width: 640px; font-size: 18px; line-height: 1.8; font-weight: 300;
+    color: rgba(255,255,255,0.85); animation: rise 1s .45s both;
+  }
+  .hero .hero-cta { margin-top: 46px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; animation: rise 1s .6s both; }
+  .btn-light {
+    text-decoration: none; background: #fff; color: var(--navy); padding: 15px 36px; border-radius: 999px;
+    font-size: 13px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  }
+  .btn-light:hover { background: var(--turq); color: var(--navy); }
+  .btn-ghost {
+    text-decoration: none; border: 1px solid rgba(255,255,255,0.55); color: #fff; padding: 15px 36px; border-radius: 999px;
+    font-size: 13px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.12); }
+  .scroll-cue {
+    position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%); z-index: 1;
+    color: rgba(255,255,255,0.75); font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase;
+    text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .scroll-cue::after { content: ""; width: 1px; height: 44px; background: linear-gradient(rgba(255,255,255,0.8), transparent); animation: drip 2.2s infinite; }
+  @keyframes drip { 0% { transform: scaleY(0); transform-origin: top; } 55% { transform: scaleY(1); transform-origin: top; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+
+  /* ---------- reveal transitions ---------- */
+  .rv { opacity: 0; transform: translateY(30px); transition: opacity .9s ease, transform .9s ease; }
+  .rv.rv-in { opacity: 1; transform: none; }
+
+  /* ---------- sections ---------- */
+  section { padding: 110px 24px; }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  .sec-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+  .sec-head h2 { margin: 18px 0 16px; font-size: clamp(38px, 5vw, 58px); font-weight: 600; line-height: 1.1; color: var(--navy); }
+  .sec-head p { margin: 0; font-size: 16.5px; line-height: 1.8; color: var(--slate); }
+
+  /* ---------- stats ---------- */
+  .stats { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 70px 24px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; max-width: 1120px; margin: 0 auto; text-align: center; }
+  .stat .num { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 600; color: var(--navy); line-height: 1; }
+  .stat .num em { font-style: normal; color: var(--azure); }
+  .stat .lbl { margin-top: 12px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--slate); line-height: 1.8; }
+
+  /* ---------- about ---------- */
+  .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 72px; align-items: center; }
+  .about-photo { position: relative; }
+  .about-photo img { display: block; width: 100%; border-radius: 4px; box-shadow: 0 30px 70px rgba(11,34,57,0.25); }
+  .about-photo::before {
+    content: ""; position: absolute; inset: 22px -22px -22px 22px; border: 1px solid var(--turq);
+    border-radius: 4px; z-index: -1;
+  }
+  .about-copy h2 { margin: 18px 0 22px; font-size: clamp(36px, 4.5vw, 52px); font-weight: 600; line-height: 1.12; color: var(--navy); }
+  .about-copy p { margin: 0 0 18px; font-size: 16.5px; line-height: 1.9; color: var(--slate); }
+
+  /* ---------- CV accordions ---------- */
+  .cv { background: var(--white); border-top: 1px solid var(--line); }
+  .acc { border-bottom: 1px solid var(--line); }
+  .acc:first-of-type { border-top: 1px solid var(--line); }
+  .acc-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    padding: 34px 8px; cursor: pointer; transition: padding .35s;
+  }
+  .acc-head:hover { padding-left: 18px; }
+  .acc-head .t { display: flex; flex-direction: column; gap: 8px; }
+  .acc-head h3 { margin: 0; font-size: clamp(26px, 3.2vw, 38px); font-weight: 600; color: var(--navy); line-height: 1.1; }
+  .acc-chev {
+    flex: 0 0 auto; width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; color: var(--azure);
+    font-size: 18px; transition: transform .45s, background .3s, color .3s, border-color .3s;
+  }
+  .acc-head:hover .acc-chev { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .acc.open .acc-chev { transform: rotate(180deg); background: var(--azure); color: #fff; border-color: var(--azure); }
+  .acc-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .6s cubic-bezier(.4,0,.2,1); }
+  .acc.open .acc-body { grid-template-rows: 1fr; }
+  .acc-body > .acc-inner { overflow: hidden; }
+  .acc-content { padding: 6px 8px 46px; }
+
+  .xp { display: flex; gap: 28px; padding: 26px 0; border-top: 1px solid var(--line); }
+  .xp:first-child { border-top: 0; }
+  .xp .when { flex: 0 0 130px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--azure); padding-top: 6px; }
+  .xp .what h4 { margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 25px; font-weight: 600; color: var(--navy); }
+  .xp .what .role { font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate); margin-bottom: 12px; }
+  .xp .what p, .xp .what li { font-size: 15.5px; line-height: 1.85; color: var(--slate); }
+  .xp .what ul { margin: 0; padding-left: 18px; }
+  .xp .what li { margin-bottom: 6px; }
+
+  .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .proj {
+    background: var(--sand); border: 1px solid var(--line); border-radius: 4px; padding: 34px;
+    transition: transform .4s, box-shadow .4s;
+  }
+  .proj:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(11,34,57,0.14); }
+  .proj .eyebrow { font-size: 10.5px; }
+  .proj h4 { margin: 14px 0 12px; font-family: 'Cormorant Garamond', serif; font-size: 27px; font-weight: 600; color: var(--navy); line-height: 1.15; }
+  .proj p { margin: 0 0 18px; font-size: 15px; line-height: 1.8; color: var(--slate); }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--azure);
+    border: 1px solid rgba(44,125,160,0.35); padding: 6px 14px; border-radius: 999px;
+  }
+  .chip.solid { background: var(--azure); color: #fff; border-color: var(--azure); }
+
+  .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 40px; }
+  .cert { display: flex; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 16px; color: var(--ink); }
+  .cert::before { content: "◆"; font-size: 9px; color: var(--turq); }
+  .cert small { color: var(--mist); letter-spacing: 0.08em; }
+
+  /* ---------- contact banner ---------- */
+  .banner {
+    background:
+      radial-gradient(90% 120% at 85% 0%, rgba(97,165,194,0.3), transparent 55%),
+      linear-gradient(170deg, #0b2239, #17466a);
+    color: #fff; text-align: center; padding: 130px 24px;
+  }
+  .banner h2 { margin: 20px auto 26px; max-width: 860px; font-size: clamp(38px, 5.5vw, 66px); font-weight: 600; line-height: 1.15; }
+  .banner p { margin: 0 auto 44px; max-width: 560px; color: rgba(255,255,255,0.8); font-size: 16.5px; line-height: 1.8; }
+
+  /* ---------- footer ---------- */
+  footer { background: #081a2c; color: rgba(255,255,255,0.72); padding: 70px 24px 40px; }
+  .foot-grid { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; }
+  .foot-grid h5 { margin: 0 0 18px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--turq); font-weight: 500; }
+  .foot-grid a { display: block; color: rgba(255,255,255,0.72); text-decoration: none; font-size: 14.5px; margin-bottom: 10px; }
+  .foot-grid a:hover { color: #fff; }
+  .foot-brand { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 0.1em; color: #fff; text-transform: uppercase; margin-bottom: 14px; }
+  .foot-note { max-width: 1120px; margin: 54px auto 0; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 12px; letter-spacing: 0.12em; color: rgba(255,255,255,0.45); }
+
+  @media (max-width: 900px) {
+    .stats-grid, .proj-grid, .cert-grid { grid-template-columns: 1fr 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .foot-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 620px) {
+    nav { padding: 18px 22px; } nav.scrolled { padding: 12px 22px; }
+    .nav-links { display: none; }
+    .stats-grid, .proj-grid, .cert-grid { grid-template-columns: 1fr; }
+    .xp { flex-direction: column; gap: 8px; }
+    section { padding: 80px 20px; }
   }
 </style>
 <script src="editor.js" defer></script>
 </head>
 <body>
 
-<div id="site" style="background:linear-gradient(180deg, #ffffff 0%, #f4f7fb 50%, #e7edf7 100%); color:#101c33; font-family:'Archivo',sans-serif; min-height:100vh">
+<div id="site">
 
   <!-- NAV -->
-  <div data-sec data-name="Navigation" style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 40px; background:rgba(255,255,255,0.85); backdrop-filter:blur(12px); border-bottom:1px solid rgba(16,28,51,0.08)">
-    <div style="display:flex; align-items:center; gap:10px">
-      <div style="width:9px; height:9px; border-radius:50%; background:#1f3d7a; animation:pulseDot 2.4s infinite"></div>
-      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; letter-spacing:0.14em">SOUGAT-1</span>
-    </div>
-    <div class="nav-links" style="display:flex; align-items:center; gap:28px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.06em">
-      <a href="#work" style="color:#54617e; text-decoration:none">PROOF OF WORK</a>
-      <a href="#configs" style="color:#54617e; text-decoration:none">CONFIGURATIONS</a>
-      <a href="#benchmarks" style="color:#54617e; text-decoration:none">BENCHMARKS</a>
-      <a href="#contact" style="color:#54617e; text-decoration:none">CONTACT</a>
-      <a data-card data-name="360° link (nav)" data-hidden="true" href="360-analysis.html" style="color:#f7f8fa; text-decoration:none; background:#1f3d7a; padding:8px 16px; border-radius:999px; font-weight:700">360° ANALYSIS</a>
-    </div>
+  <div data-sec data-name="Navigation">
+    <nav id="topnav">
+      <a class="brand" href="#top">Sougat <span>Shekhar</span> Hota</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <div class="nav-drop">
+          <button type="button">Curriculum Vitae ▾</button>
+          <div class="nav-drop-menu">
+            <a href="#cv-experience" data-open-acc="cv-experience">Experience</a>
+            <a href="#cv-projects" data-open-acc="cv-projects">Key Projects</a>
+            <a href="#cv-education" data-open-acc="cv-education">Education</a>
+            <a href="#cv-certs" data-open-acc="cv-certs">Certifications</a>
+            <a href="#cv-skills" data-open-acc="cv-skills">Skills &amp; Stack</a>
+          </div>
+        </div>
+        <a href="#numbers">Numbers</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </div>
+    </nav>
   </div>
 
   <!-- HERO -->
-  <div id="top" data-sec data-name="Hero" style="padding:150px 40px 60px; max-width:1240px; margin:0 auto">
-    <div style="display:flex; gap:56px; align-items:flex-end; flex-wrap:wrap">
-      <div style="flex:1 1 560px; display:flex; flex-direction:column; gap:26px">
-        <div data-card data-name="Status badges" style="display:flex; align-items:center; gap:12px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:#1f3d7a">
-          <span style="border:1px solid rgba(31,61,122,0.45); padding:5px 12px; border-radius:999px">HUMAN · PRODUCTION-DEPLOYED</span>
-          <span style="color:#54617e">MUMBAI, IN</span>
-        </div>
-        <h1 style="margin:0; font-size:clamp(64px,9vw,124px); font-weight:900; line-height:0.92; letter-spacing:-0.03em">Sougat<br>Shekhar<br>Hota</h1>
-        <p data-card data-name="Tagline: Product Management" style="margin:0; font-size:22px; line-height:1.5; color:#3a4763; max-width:560px">An enterprise account manager, fine-tuned on ₹384 Mn of real customer problems — now shipping toward <strong style="color:#101c33">Product Management</strong> and <strong style="color:#101c33">Process Excellence</strong>.</p>
-        <p data-card data-name="Tagline: Process Excellence (alt)" data-hidden="true" style="margin:0; font-size:22px; line-height:1.5; color:#3a4763; max-width:560px">A Lean Six Sigma operator who turned a ₹384 Mn enterprise portfolio into a laboratory for <strong style="color:#101c33">Process Excellence</strong> — systems, not heroics.</p>
-        <p data-card data-name="Tagline: Partner &amp; Alliances (alt)" data-hidden="true" style="margin:0; font-size:22px; line-height:1.5; color:#3a4763; max-width:560px">Two years inside one of India's largest telecom partner categories — now building <strong style="color:#101c33">Partner &amp; Alliance ecosystems</strong> from the other side of the table.</p>
-        <p data-card data-name="Wit line" style="margin:0; font-family:'JetBrains Mono',monospace; font-size:13px; color:#8791a6">No hallucinations. All metrics reproducible. References available on request.</p>
-        <div data-card data-name="Hero buttons" style="display:flex; gap:14px; flex-wrap:wrap">
-          <a href="#work" style="text-decoration:none; background:#101c33; color:#f7f8fa; font-weight:700; font-size:15px; padding:14px 28px; border-radius:999px">See the proof</a>
-          <a data-card data-name="360° link (hero)" data-hidden="true" href="360-analysis.html" style="text-decoration:none; border:1px solid rgba(16,28,51,0.3); color:#101c33; font-weight:600; font-size:15px; padding:14px 28px; border-radius:999px">Read the 360° teardown</a>
-        </div>
-      </div>
-      <div data-card data-name="Photo" style="flex:0 1 380px; display:flex; flex-direction:column; gap:14px">
-        <div style="border-radius:20px; overflow:hidden; border:1px solid rgba(16,28,51,0.14); position:relative">
-          <img src="assets/sougat.jpg" alt="Sougat Shekhar Hota" style="display:block; width:100%; height:auto">
-          <div style="position:absolute; bottom:14px; left:14px; right:14px; display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:rgba(255,255,255,0.95); background:rgba(16,28,51,0.6); backdrop-filter:blur(6px); padding:10px 14px; border-radius:10px">
-            <span>MODEL: SOUGAT-1</span>
-            <span>MBA · XIMB '24</span>
-          </div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8791a6; display:flex; justify-content:space-between">
-          <span>Power draw: 3 coffees/day</span>
-          <span>Uptime: 99.9%</span>
-        </div>
+  <header class="hero" id="top" data-sec data-name="Hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Strategic Account Manager · Mumbai, India</div>
+      <h1>Where enterprise trust<br>meets quiet precision.</h1>
+      <p class="sub">I steward a ₹384 Mn enterprise portfolio the way a captain runs a vessel — calm at the helm, obsessive about the systems below deck. Now charting a course toward Product Management and Process Excellence.</p>
+      <div class="hero-cta">
+        <a class="btn-light" href="#cv-experience" data-open-acc="cv-experience">Explore the CV</a>
+        <a class="btn-ghost" href="#contact">Get in touch</a>
       </div>
     </div>
+    <a class="scroll-cue" href="#numbers">Scroll</a>
+  </header>
 
-    <!-- STATS STRIP -->
-    <div data-sec data-name="Stats strip" class="g4" style="margin-top:72px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(16,28,51,0.12); border:1px solid rgba(16,28,51,0.12); border-radius:16px; overflow:hidden">
-      <div data-card data-name="Stat: ARR" style="background:#f7f8fa; padding:26px 24px; display:flex; flex-direction:column; gap:6px">
-        <span style="font-size:38px; font-weight:800; letter-spacing:-0.02em">₹384 Mn</span>
-        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#54617e">ARR portfolio owned · 30+ enterprise accounts</span>
+  <!-- STATS -->
+  <div class="stats" id="numbers" data-sec data-name="Numbers strip">
+    <div class="stats-grid">
+      <div class="stat rv" data-card data-name="Stat: ARR">
+        <div class="num">₹384 <em>Mn</em></div>
+        <div class="lbl">ARR portfolio owned<br>30+ enterprise accounts</div>
       </div>
-      <div data-card data-name="Stat: Churn" style="background:#f7f8fa; padding:26px 24px; display:flex; flex-direction:column; gap:6px">
-        <span style="font-size:38px; font-weight:800; letter-spacing:-0.02em; color:#1f3d7a">−46%</span>
-        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#54617e">YoY churn, via a health-scoring system built from scratch</span>
+      <div class="stat rv" data-card data-name="Stat: Churn">
+        <div class="num"><em>−46%</em></div>
+        <div class="lbl">YoY churn, via a health-scoring<br>system built from scratch</div>
       </div>
-      <div data-card data-name="Stat: Incidents" style="background:#f7f8fa; padding:26px 24px; display:flex; flex-direction:column; gap:6px">
-        <span style="font-size:38px; font-weight:800; letter-spacing:-0.02em; color:#1f3d7a">−80%</span>
-        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#54617e">Recurring incidents, via AI automation shipped to production</span>
+      <div class="stat rv" data-card data-name="Stat: Incidents">
+        <div class="num"><em>−80%</em></div>
+        <div class="lbl">Recurring incidents, via AI<br>automation in production</div>
       </div>
-      <div data-card data-name="Stat: SLA" style="background:#f7f8fa; padding:26px 24px; display:flex; flex-direction:column; gap:6px">
-        <span style="font-size:38px; font-weight:800; letter-spacing:-0.02em">₹60L+</span>
-        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#54617e">SLA value recovered through data-backed CXO negotiation</span>
+      <div class="stat rv" data-card data-name="Stat: SLA">
+        <div class="num">₹60L<em>+</em></div>
+        <div class="lbl">SLA value recovered through<br>data-backed CXO negotiation</div>
       </div>
     </div>
   </div>
 
-  <!-- PROOF OF WORK -->
-  <div id="work" data-sec data-name="Proof of Work" style="max-width:1240px; margin:0 auto; padding:90px 40px 30px; display:flex; flex-direction:column; gap:80px">
-    <div data-card data-name="Section heading" style="display:flex; flex-direction:column; gap:12px">
-      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#1f3d7a">01 — PROOF OF WORK</span>
-      <h2 style="margin:0; font-size:clamp(40px,5vw,64px); font-weight:900; letter-spacing:-0.02em; line-height:1">Powered by actual shipping<span style="color:#1f3d7a">.</span></h2>
-      <p style="margin:0; font-size:18px; color:#54617e; max-width:640px">Four systems built inside Bharti Airtel's strategic enterprise business — each one product thinking applied to a live operational problem.</p>
+  <!-- ABOUT -->
+  <section id="about" data-sec data-name="About">
+    <div class="wrap about-grid">
+      <div class="about-photo rv" data-card data-name="Photo">
+        <img src="assets/sougat.jpg" alt="Sougat Shekhar Hota">
+      </div>
+      <div class="about-copy rv" data-card data-name="About copy">
+        <div class="eyebrow">The Profile</div>
+        <h2>A builder wearing an account manager's badge.</h2>
+        <p>Two years inside Bharti Airtel's strategic enterprise business — ICICI Bank, Asian Paints, Credit Suisse, Godrej — taught me that great account management is quiet systems work: health scores instead of heroics, governance instead of goodwill, automation instead of apology.</p>
+        <p>The evidence pattern reads like a product portfolio: a churn engine adopted as regional best practice, LLM automation shipped to production, a service framework rolled out nationally, and dashboards that changed how executives make decisions.</p>
+        <p>MBA from XIMB. Lean Six Sigma Green Belt. Three coffees a day. Every claim on this page is reproducible on request.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="g2 g2w" style="display:grid; grid-template-columns:1fr 1fr; gap:24px">
-      <div data-card data-name="Project: Churn engine" style="border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:36px; display:flex; flex-direction:column; gap:16px; background:linear-gradient(160deg, rgba(31,61,122,0.08), transparent 50%)">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#1f3d7a">CHURN ENGINE · 2024–26</span>
-        <h3 style="margin:0; font-size:28px; font-weight:800; letter-spacing:-0.01em">Proactive health-scoring model</h3>
-        <p style="margin:0; font-size:16px; line-height:1.6; color:#3a4763">Built a churn prediction and intervention system across 30+ accounts — weighted signals, SLA governance, structured QBR/MBR cadence. Recognised by regional leadership as a best-practice model.</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:auto">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:6px 12px; border-radius:999px; color:#54617e">46% churn ↓</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:6px 12px; border-radius:999px; color:#54617e">₹4 Cr account saved</span>
-        </div>
+  <!-- CV ACCORDIONS -->
+  <section class="cv" id="cv" data-sec data-name="Curriculum Vitae">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div class="eyebrow">Curriculum Vitae</div>
+        <h2>The full manifest.</h2>
+        <p>Everything below unfolds — open what interests you.</p>
       </div>
-      <div data-card data-name="Project: AI ticketing" style="border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:36px; display:flex; flex-direction:column; gap:16px">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#1f3d7a">AI IN PRODUCTION · ASIAN PAINTS</span>
-        <h3 style="margin:0; font-size:28px; font-weight:800; letter-spacing:-0.01em">Predictive ticketing &amp; incident automation</h3>
-        <p style="margin:0; font-size:16px; line-height:1.6; color:#3a4763">Independently designed and deployed an n8n + LLM-agent system with REST API integrations in a live enterprise environment — one of the few account managers in Airtel's enterprise division to ship AI to production. Playbook adopted across multiple accounts.</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:auto">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:6px 12px; border-radius:999px; color:#54617e">80% incidents ↓</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:6px 12px; border-radius:999px; color:#54617e">n8n · LLM agents · APIs</span>
-        </div>
-      </div>
-      <div data-card data-name="Project: SD-WAN framework" style="border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:36px; display:flex; flex-direction:column; gap:16px">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#1f3d7a">NATIONAL FRAMEWORK · SD-WAN</span>
-        <h3 style="margin:0; font-size:28px; font-weight:800; letter-spacing:-0.01em">Service transformation framework, adopted by HQ</h3>
-        <p style="margin:0; font-size:16px; line-height:1.6; color:#3a4763">Authored the Fortinet SD-WAN Service Transformation framework while leading 15+ engineers with Cisco and Fortinet partners across 2,000+ enterprise sites. Airtel HQ adopted it for national rollout.</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:auto">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:6px 12px; border-radius:999px; color:#54617e">25% FTR/TAT ↑</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:6px 12px; border-radius:999px; color:#54617e">2,000+ sites</span>
-        </div>
-      </div>
-      <div data-card data-name="Project: Power BI dashboards" style="border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:36px; display:flex; flex-direction:column; gap:16px">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#1f3d7a">EXECUTIVE INTELLIGENCE · POWER BI</span>
-        <h3 style="margin:0; font-size:28px; font-weight:800; letter-spacing:-0.01em">Service intelligence dashboards for MBR governance</h3>
-        <p style="margin:0; font-size:16px; line-height:1.6; color:#3a4763">Real-time account-health visibility for executive reviews — the data layer behind ₹60L+ in SLA penalty waivers, negotiated with RCA documentation and transformation roadmaps at CXO level.</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:auto">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:6px 12px; border-radius:999px; color:#54617e">₹60L+ recovered</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:6px 12px; border-radius:999px; color:#54617e">NPS ↑ · VoC loops</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- FLAGSHIP BUILD -->
-    <div data-sec data-name="Flagship build" style="border:1px solid rgba(31,61,122,0.35); border-radius:24px; padding:48px; display:flex; gap:48px; align-items:center; flex-wrap:wrap; background:linear-gradient(120deg, rgba(31,61,122,0.07), transparent 60%)">
-      <div style="flex:1 1 420px; display:flex; flex-direction:column; gap:18px">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#1f3d7a">FLAGSHIP SIDE-BUILD</span>
-        <h3 style="margin:0; font-size:40px; font-weight:900; letter-spacing:-0.02em; line-height:1.05">Customer Health Score Engine</h3>
-        <p style="margin:0; font-size:17px; line-height:1.65; color:#3a4763">A weekend build: React frontend, Claude API for narrative risk analysis, no backend. Computes weighted health scores across a mock enterprise CSM portfolio, then generates churn-risk narratives and recommended actions per account — the churn playbook from Airtel, productised.</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:rgba(31,61,122,0.14); color:#1f3d7a; padding:6px 12px; border-radius:999px">React</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:rgba(31,61,122,0.14); color:#1f3d7a; padding:6px 12px; border-radius:999px">Claude API</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:rgba(31,61,122,0.14); color:#1f3d7a; padding:6px 12px; border-radius:999px">5-phase build plan</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:rgba(31,61,122,0.14); color:#1f3d7a; padding:6px 12px; border-radius:999px">~1 weekend</span>
-        </div>
-      </div>
-      <div style="flex:1 1 400px; border-radius:16px; overflow:hidden; border:1px solid rgba(16,28,51,0.14); background:#ffffff">
-        <img src="assets/build_workflow.png" alt="Customer Health Score Engine build workflow" style="display:block; width:100%; height:auto">
-      </div>
-    </div>
-  </div>
-
-  <!-- CONFIGURATIONS -->
-  <div id="configs" data-sec data-name="Configurations" style="max-width:1240px; margin:0 auto; padding:90px 40px; display:flex; flex-direction:column; gap:48px">
-    <div data-card data-name="Section heading" style="display:flex; flex-direction:column; gap:12px">
-      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#1f3d7a">02 — CONFIGURATIONS</span>
-      <h2 style="margin:0; font-size:clamp(40px,5vw,64px); font-weight:900; letter-spacing:-0.02em; line-height:1">One profile. Three deployments<span style="color:#1f3d7a">.</span></h2>
-      <p style="margin:0; font-size:18px; color:#54617e; max-width:640px">The same underlying capabilities, configured for the role in front of them.</p>
-    </div>
-    <div class="g3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px">
-      <div data-card data-name="Config: Product Manager" style="border:1px solid rgba(31,61,122,0.4); border-radius:20px; padding:34px; display:flex; flex-direction:column; gap:18px; background:linear-gradient(180deg, rgba(31,61,122,0.08), transparent 40%)">
-        <div style="display:flex; justify-content:space-between; align-items:center">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; letter-spacing:0.1em">PRODUCT MANAGER</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:10px; background:#1f3d7a; color:#f7f8fa; font-weight:700; padding:4px 10px; border-radius:999px">PRIMARY</span>
-        </div>
-        <p style="margin:0; font-size:15px; line-height:1.6; color:#3a4763">Customer-obsessed by profession, not by slide. Two years of living inside enterprise users' pain, plus hands-on LLM product builds.</p>
-        <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; color:#54617e; border-top:1px solid rgba(16,28,51,0.12); padding-top:16px">
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Discovery</span><span style="color:#101c33; text-align:right">30+ accounts of VoC</span></div>
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Artifacts</span><span style="color:#101c33; text-align:right">BRD/PRD · GTM (Amazon capstone)</span></div>
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Build</span><span style="color:#101c33; text-align:right">n8n · LLM agents · APIs</span></div>
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Cert</span><span style="color:#101c33; text-align:right">Certified Product Manager</span></div>
-        </div>
-      </div>
-      <div data-card data-name="Config: Process Excellence" style="border:1px solid rgba(16,28,51,0.16); border-radius:20px; padding:34px; display:flex; flex-direction:column; gap:18px">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; letter-spacing:0.1em">PROCESS EXCELLENCE</span>
-        <p style="margin:0; font-size:15px; line-height:1.6; color:#3a4763">Systematises everything it touches: churn, incidents, governance, delivery. Measures before and after, then writes the playbook.</p>
-        <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; color:#54617e; border-top:1px solid rgba(16,28,51,0.12); padding-top:16px">
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Method</span><span style="color:#101c33; text-align:right">Lean Six Sigma GB (KPMG)</span></div>
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Automation</span><span style="color:#101c33; text-align:right">80% incident elimination</span></div>
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Scale</span><span style="color:#101c33; text-align:right">Framework → national rollout</span></div>
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Governance</span><span style="color:#101c33; text-align:right">SLA · QBR/MBR · RCA</span></div>
-        </div>
-      </div>
-      <div data-card data-name="Config: Partner &amp; Alliances" style="border:1px solid rgba(16,28,51,0.16); border-radius:20px; padding:34px; display:flex; flex-direction:column; gap:18px">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; letter-spacing:0.1em">PARTNER &amp; ALLIANCES</span>
-        <p style="margin:0; font-size:15px; line-height:1.6; color:#3a4763">Comes from inside a partner category — knows how a large telecom evaluates, sells, and delivers. Governance discipline transfers 1:1.</p>
-        <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; color:#54617e; border-top:1px solid rgba(16,28,51,0.12); padding-top:16px">
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Ecosystem</span><span style="color:#101c33; text-align:right">Cisco · Fortinet · Zscaler</span></div>
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Co-delivery</span><span style="color:#101c33; text-align:right">Joint accountability mapping</span></div>
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Governance</span><span style="color:#101c33; text-align:right">CXO QBRs · joint plans</span></div>
-          <div style="display:flex; justify-content:space-between; gap:12px"><span>Certs</span><span style="color:#101c33; text-align:right">ZTCA · ZCSP</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BENCHMARKS / 360 SUMMARY -->
-  <div id="benchmarks" data-sec data-name="Benchmarks" style="background:#e9eef6; border-top:1px solid rgba(16,28,51,0.08); border-bottom:1px solid rgba(16,28,51,0.08)">
-    <div style="max-width:1240px; margin:0 auto; padding:90px 40px; display:flex; flex-direction:column; gap:48px">
-      <div data-card data-name="Section heading" style="display:flex; flex-direction:column; gap:12px">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#1f3d7a">03 — BENCHMARKS</span>
-        <h2 style="margin:0; font-size:clamp(40px,5vw,64px); font-weight:900; letter-spacing:-0.02em; line-height:1">Self-evaluated. Honestly<span style="color:#1f3d7a">.</span></h2>
-        <p style="margin:0; font-size:18px; color:#54617e; max-width:680px">A 360° readiness audit of this profile against target roles — strengths, gaps, and the plan to close them. Scores are self-assessed against typical job descriptions, not vibes.</p>
-      </div>
-      <div class="g3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px">
-        <div data-card data-name="Score: Product Management" style="display:flex; flex-direction:column; gap:14px; border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:32px; background:#f7f8fa">
-          <div style="display:flex; justify-content:space-between; align-items:baseline">
-            <span style="font-weight:700; font-size:17px">Product Management</span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:26px; font-weight:700; color:#1f3d7a">72<span style="font-size:14px; color:#8791a6">/100</span></span>
+      <!-- EXPERIENCE -->
+      <div class="acc rv" id="cv-experience" data-card data-name="CV: Experience">
+        <div class="acc-head" role="button" aria-expanded="false">
+          <div class="t">
+            <span class="eyebrow">01 · Experience</span>
+            <h3>Professional experience</h3>
           </div>
-          <div style="height:6px; border-radius:999px; background:rgba(16,28,51,0.1); overflow:hidden"><div style="width:72%; height:100%; background:#1f3d7a; border-radius:999px"></div></div>
-          <p style="margin:0; font-size:14px; line-height:1.6; color:#54617e">Elite customer insight and GTM artifacts; gap is a shipped software product owned end-to-end and deeper analytics tooling.</p>
+          <span class="acc-chev" contenteditable="false">↓</span>
         </div>
-        <div data-card data-name="Score: Process Excellence" style="display:flex; flex-direction:column; gap:14px; border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:32px; background:#f7f8fa">
-          <div style="display:flex; justify-content:space-between; align-items:baseline">
-            <span style="font-weight:700; font-size:17px">Process Excellence</span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:26px; font-weight:700; color:#1f3d7a">81<span style="font-size:14px; color:#8791a6">/100</span></span>
-          </div>
-          <div style="height:6px; border-radius:999px; background:rgba(16,28,51,0.1); overflow:hidden"><div style="width:81%; height:100%; background:#1f3d7a; border-radius:999px"></div></div>
-          <p style="margin:0; font-size:14px; line-height:1.6; color:#54617e">Strongest track: LSS Green Belt with proven, quantified process wins at scale. Gap is Black Belt and a formal transformation program.</p>
-        </div>
-        <div data-card data-name="Score: Partner &amp; Alliances" style="display:flex; flex-direction:column; gap:14px; border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:32px; background:#f7f8fa">
-          <div style="display:flex; justify-content:space-between; align-items:baseline">
-            <span style="font-weight:700; font-size:17px">Partner &amp; Alliances</span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:26px; font-weight:700; color:#1f3d7a">76<span style="font-size:14px; color:#8791a6">/100</span></span>
-          </div>
-          <div style="height:6px; border-radius:999px; background:rgba(16,28,51,0.1); overflow:hidden"><div style="width:76%; height:100%; background:#1f3d7a; border-radius:999px"></div></div>
-          <p style="margin:0; font-size:14px; line-height:1.6; color:#54617e">Rare insider perspective on how partners actually operate; gap is direct channel ownership — offset by 1:1 transferable governance.</p>
-        </div>
-      </div>
-      <a data-card data-name="360 link button" data-hidden="true" href="360-analysis.html" style="align-self:flex-start; text-decoration:none; background:#1f3d7a; color:#f7f8fa; font-weight:700; font-size:16px; padding:16px 32px; border-radius:999px">Open the full 360° &amp; 3D analysis →</a>
-    </div>
-  </div>
-
-  <!-- MODEL CARD -->
-  <div data-sec data-name="Model card (Training data)" style="max-width:1240px; margin:0 auto; padding:90px 40px; display:flex; flex-direction:column; gap:40px">
-    <div data-card data-name="Section heading" style="display:flex; flex-direction:column; gap:12px">
-      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#1f3d7a">04 — MODEL CARD</span>
-      <h2 style="margin:0; font-size:clamp(40px,5vw,64px); font-weight:900; letter-spacing:-0.02em; line-height:1">Training data<span style="color:#1f3d7a">.</span></h2>
-    </div>
-    <div class="g2w" style="display:grid; grid-template-columns:1.2fr 1fr; gap:24px">
-      <div style="display:flex; flex-direction:column; gap:24px">
-        <div data-card data-name="Experience timeline" style="border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:32px; display:flex; flex-direction:column; gap:20px">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#8791a6">PRE-TRAINING</span>
-          <div style="display:flex; flex-direction:column; gap:6px">
-            <div style="display:flex; justify-content:space-between; gap:16px; align-items:baseline">
-              <span style="font-size:19px; font-weight:700">Bharti Airtel — Account Manager, Strategic Enterprise</span>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8791a6; white-space:nowrap">2024 — NOW</span>
+        <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+          <div class="xp" data-card data-name="Experience: Airtel">
+            <div class="when">2024 — Now</div>
+            <div class="what">
+              <h4>Bharti Airtel</h4>
+              <div class="role">Account Manager · Strategic Enterprise</div>
+              <ul>
+                <li>Own a ₹384 Mn ARR portfolio across 30+ enterprise accounts — BFSI, IT and FMCG, including ICICI Bank, Asian Paints, Credit Suisse and Godrej Group.</li>
+                <li>Built a proactive health-scoring and churn-intervention model; churn down 46% YoY and a ₹4 Cr account saved — recognised as regional best practice.</li>
+                <li>Shipped an n8n + LLM-agent incident automation to production at Asian Paints; recurring incidents down 80%, playbook adopted across accounts.</li>
+                <li>Recovered ₹60L+ in SLA value through RCA-documented, dashboard-backed negotiation at CXO level.</li>
+              </ul>
             </div>
-            <p style="margin:0; font-size:15px; line-height:1.6; color:#54617e">ICICI Bank, Asian Paints, Credit Suisse, Godrej Group. Full lifecycle: renewals, upsell, escalations, executive governance across BFSI, IT, FMCG.</p>
           </div>
-          <div style="display:flex; flex-direction:column; gap:6px; border-top:1px solid rgba(16,28,51,0.1); padding-top:20px">
-            <div style="display:flex; justify-content:space-between; gap:16px; align-items:baseline">
-              <span style="font-size:19px; font-weight:700">ITC — Area Sales Manager Intern, Personal Care</span>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8791a6; white-space:nowrap">2023</span>
+          <div class="xp" data-card data-name="Experience: ITC">
+            <div class="when">2023</div>
+            <div class="what">
+              <h4>ITC Limited</h4>
+              <div class="role">Area Sales Manager Intern · Personal Care</div>
+              <ul>
+                <li>Audited 460+ retail outlets; built competitor intelligence versus Skinn, Nykaa and Sugar.</li>
+                <li>Designed a promoter-effectiveness scoring model that improved campaign ROI by 25%.</li>
+              </ul>
             </div>
-            <p style="margin:0; font-size:15px; line-height:1.6; color:#54617e">460+ outlet audit, competitor intelligence vs. Skinn/Nykaa/Sugar, promoter-effectiveness scoring → 25% campaign ROI improvement.</p>
           </div>
-          <div style="display:flex; flex-direction:column; gap:6px; border-top:1px solid rgba(16,28,51,0.1); padding-top:20px">
-            <div style="display:flex; justify-content:space-between; gap:16px; align-items:baseline">
-              <span style="font-size:19px; font-weight:700">XIMB — MBA, Business Management</span>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8791a6; white-space:nowrap">2022 — 24</span>
-            </div>
-            <p style="margin:0; font-size:15px; line-height:1.6; color:#54617e">Marketing · Operations · Strategy. Capstone: full BRD + GTM for Amazon India Fitness &amp; Health — awarded distinction.</p>
-          </div>
-        </div>
-        <div data-card data-name="Cite-as joke block" style="border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:28px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:#54617e; background:#eef2f8">
-          <span style="color:#8791a6">// cite as</span><br>
-          @misc{sougat2026,<br>
-          &nbsp;&nbsp;title = {SOUGAT-1: An Open-Minded Enterprise Model},<br>
-          &nbsp;&nbsp;author = {Hota, Sougat Shekhar},<br>
-          &nbsp;&nbsp;year = {2026},<br>
-          &nbsp;&nbsp;note = {Weights: gym-dependent. Alignment: customer-first.}<br>
-          }
-        </div>
+        </div></div></div>
       </div>
-      <div data-card data-name="Certifications &amp; stack" style="border:1px solid rgba(16,28,51,0.14); border-radius:20px; padding:32px; display:flex; flex-direction:column; gap:16px">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#8791a6">FINE-TUNES &amp; CERTIFICATIONS</span>
-        <div style="display:flex; flex-direction:column; gap:12px; font-size:15px">
-          <div style="display:flex; align-items:center; gap:12px"><span style="width:6px; height:6px; border-radius:50%; background:#1f3d7a"></span><span>Lean Six Sigma Green Belt — KPMG</span></div>
-          <div style="display:flex; align-items:center; gap:12px"><span style="width:6px; height:6px; border-radius:50%; background:#1f3d7a"></span><span>Certified Product Manager — Phoenix Global</span></div>
-          <div style="display:flex; align-items:center; gap:12px"><span style="width:6px; height:6px; border-radius:50%; background:#1f3d7a"></span><span>Zero Trust Cyber Associate (ZTCA) — Zscaler</span></div>
-          <div style="display:flex; align-items:center; gap:12px"><span style="width:6px; height:6px; border-radius:50%; background:#1f3d7a"></span><span>Zscaler Certified Sales Professional (ZCSP)</span></div>
-          <div style="display:flex; align-items:center; gap:12px"><span style="width:6px; height:6px; border-radius:50%; background:#1f3d7a"></span><span>AI Automation: LLM Apps, Agents &amp; APIs — Udemy</span></div>
-          <div style="display:flex; align-items:center; gap:12px"><span style="width:6px; height:6px; border-radius:50%; background:#1f3d7a"></span><span>McKinsey Forward Program</span></div>
-        </div>
-        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#8791a6; margin-top:12px">STACK</span>
-        <div style="display:flex; gap:8px; flex-wrap:wrap">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:5px 11px; border-radius:999px; color:#3a4763">Power BI</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:5px 11px; border-radius:999px; color:#3a4763">Salesforce</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:5px 11px; border-radius:999px; color:#3a4763">n8n</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:5px 11px; border-radius:999px; color:#3a4763">Prompt engineering</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:5px 11px; border-radius:999px; color:#3a4763">REST APIs</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:5px 11px; border-radius:999px; color:#3a4763">SD-WAN</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:5px 11px; border-radius:999px; color:#3a4763">ZTNA</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; border:1px solid rgba(16,28,51,0.2); padding:5px 11px; border-radius:999px; color:#3a4763">Advanced Excel</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- CONTACT -->
-  <div id="contact" data-sec data-name="Contact" style="border-top:1px solid rgba(16,28,51,0.08); background:#e9eef6">
-    <div style="max-width:1240px; margin:0 auto; padding:100px 40px 60px; display:flex; flex-direction:column; gap:48px">
-      <h2 style="margin:0; font-size:clamp(44px,6vw,80px); font-weight:900; letter-spacing:-0.03em; line-height:1.02; max-width:900px">If I can systematise a ₹384 Mn portfolio, imagine what I can do for your product<span style="color:#1f3d7a">.</span></h2>
-      <div style="display:flex; gap:16px; flex-wrap:wrap">
-        <a href="mailto:sougatshekhar97@gmail.com" style="text-decoration:none; background:#1f3d7a; color:#f7f8fa; font-weight:700; font-size:16px; padding:16px 32px; border-radius:999px">sougatshekhar97@gmail.com</a>
-        <a href="https://linkedin.com/in/sougat-shekhar-hota" style="text-decoration:none; border:1px solid rgba(16,28,51,0.3); color:#101c33; font-weight:600; font-size:16px; padding:16px 32px; border-radius:999px">LinkedIn ↗</a>
-        <span style="border:1px solid rgba(16,28,51,0.14); color:#54617e; font-family:'JetBrains Mono',monospace; font-size:14px; padding:16px 32px; border-radius:999px">+91 76558 45685</span>
-        <span style="border:1px solid rgba(16,28,51,0.14); color:#54617e; font-family:'JetBrains Mono',monospace; font-size:14px; padding:16px 32px; border-radius:999px">Mumbai, India</span>
+      <!-- PROJECTS -->
+      <div class="acc rv" id="cv-projects" data-card data-name="CV: Key Projects">
+        <div class="acc-head" role="button" aria-expanded="false">
+          <div class="t">
+            <span class="eyebrow">02 · Proof of Work</span>
+            <h3>Key projects &amp; systems</h3>
+          </div>
+          <span class="acc-chev" contenteditable="false">↓</span>
+        </div>
+        <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+          <div class="proj-grid">
+            <div class="proj" data-card data-name="Project: Churn engine">
+              <div class="eyebrow">Churn Engine · 2024–26</div>
+              <h4>Proactive health-scoring model</h4>
+              <p>Churn prediction and intervention across 30+ accounts — weighted signals, SLA governance, structured QBR/MBR cadence.</p>
+              <div class="chips"><span class="chip">46% churn ↓</span><span class="chip">₹4 Cr saved</span></div>
+            </div>
+            <div class="proj" data-card data-name="Project: AI automation">
+              <div class="eyebrow">AI in Production · Asian Paints</div>
+              <h4>Predictive ticketing &amp; incident automation</h4>
+              <p>Independently designed and deployed an n8n + LLM-agent system with REST API integrations in a live enterprise environment.</p>
+              <div class="chips"><span class="chip">80% incidents ↓</span><span class="chip">n8n · LLM · APIs</span></div>
+            </div>
+            <div class="proj" data-card data-name="Project: SD-WAN framework">
+              <div class="eyebrow">National Framework · SD-WAN</div>
+              <h4>Service transformation, adopted by HQ</h4>
+              <p>Authored the Fortinet SD-WAN Service Transformation framework leading 15+ engineers across 2,000+ enterprise sites; adopted for national rollout.</p>
+              <div class="chips"><span class="chip">25% FTR/TAT ↑</span><span class="chip">2,000+ sites</span></div>
+            </div>
+            <div class="proj" data-card data-name="Project: Health Score Engine">
+              <div class="eyebrow">Flagship Side-Build</div>
+              <h4>Customer Health Score Engine</h4>
+              <p>A weekend build — React frontend, Claude API for narrative risk analysis. The Airtel churn playbook, productised.</p>
+              <div class="chips"><span class="chip solid">React</span><span class="chip solid">Claude API</span></div>
+            </div>
+          </div>
+        </div></div></div>
       </div>
-      <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(16,28,51,0.1); padding-top:24px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#8791a6; flex-wrap:wrap; gap:12px">
-        <span>SOUGAT-1 · v2026.07 · Open to PM, Process Excellence &amp; Partner roles</span>
+
+      <!-- EDUCATION -->
+      <div class="acc rv" id="cv-education" data-card data-name="CV: Education">
+        <div class="acc-head" role="button" aria-expanded="false">
+          <div class="t">
+            <span class="eyebrow">03 · Education</span>
+            <h3>Education</h3>
+          </div>
+          <span class="acc-chev" contenteditable="false">↓</span>
+        </div>
+        <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+          <div class="xp" data-card data-name="Education: XIMB">
+            <div class="when">2022 — 24</div>
+            <div class="what">
+              <h4>Xavier Institute of Management, Bhubaneswar (XIMB)</h4>
+              <div class="role">MBA · Business Management</div>
+              <p>Marketing, Operations and Strategy. Capstone: full BRD and GTM for Amazon India Fitness &amp; Health — awarded distinction.</p>
+            </div>
+          </div>
+        </div></div></div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="acc rv" id="cv-certs" data-card data-name="CV: Certifications">
+        <div class="acc-head" role="button" aria-expanded="false">
+          <div class="t">
+            <span class="eyebrow">04 · Credentials</span>
+            <h3>Certifications</h3>
+          </div>
+          <span class="acc-chev" contenteditable="false">↓</span>
+        </div>
+        <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+          <div class="cert-grid">
+            <div class="cert" data-card data-name="Cert: LSS">Lean Six Sigma Green Belt <small>— KPMG</small></div>
+            <div class="cert" data-card data-name="Cert: CPM">Certified Product Manager <small>— Phoenix Global</small></div>
+            <div class="cert" data-card data-name="Cert: ZTCA">Zero Trust Cyber Associate (ZTCA) <small>— Zscaler</small></div>
+            <div class="cert" data-card data-name="Cert: ZCSP">Zscaler Certified Sales Professional <small>— Zscaler</small></div>
+            <div class="cert" data-card data-name="Cert: AI">AI Automation: LLM Apps, Agents &amp; APIs <small>— Udemy</small></div>
+            <div class="cert" data-card data-name="Cert: McKinsey">McKinsey Forward Program <small>— McKinsey</small></div>
+          </div>
+        </div></div></div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="acc rv" id="cv-skills" data-card data-name="CV: Skills">
+        <div class="acc-head" role="button" aria-expanded="false">
+          <div class="t">
+            <span class="eyebrow">05 · Capabilities</span>
+            <h3>Skills &amp; stack</h3>
+          </div>
+          <span class="acc-chev" contenteditable="false">↓</span>
+        </div>
+        <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+          <div class="xp" data-card data-name="Skills: Core">
+            <div class="when">Core</div>
+            <div class="what">
+              <p>Strategic account management · Customer success · Process excellence (Lean Six Sigma) · Product thinking (BRD/PRD, GTM) · Executive governance (QBR/MBR, RCA) · Partner &amp; alliance management</p>
+            </div>
+          </div>
+          <div class="xp" data-card data-name="Skills: Stack">
+            <div class="when">Stack</div>
+            <div class="what">
+              <div class="chips">
+                <span class="chip">Power BI</span><span class="chip">Salesforce</span><span class="chip">n8n</span>
+                <span class="chip">Prompt engineering</span><span class="chip">REST APIs</span><span class="chip">SD-WAN</span>
+                <span class="chip">ZTNA</span><span class="chip">Advanced Excel</span>
+              </div>
+            </div>
+          </div>
+        </div></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT BANNER -->
+  <section class="banner" id="contact" data-sec data-name="Contact">
+    <div class="eyebrow" style="color:var(--turq)">Set a course</div>
+    <h2>If I can systematise a ₹384 Mn portfolio, imagine what I can do for your product.</h2>
+    <p>Open to Product Management, Process Excellence and Partner &amp; Alliances conversations.</p>
+    <div class="hero-cta" style="margin-top:0">
+      <a class="btn-light" href="mailto:sougatshekhar97@gmail.com">sougatshekhar97@gmail.com</a>
+      <a class="btn-ghost" href="https://linkedin.com/in/sougat-shekhar-hota">LinkedIn ↗</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div data-sec data-name="Footer">
+    <footer>
+      <div class="foot-grid">
+        <div data-card data-name="Footer: brand">
+          <div class="foot-brand">Sougat Shekhar Hota</div>
+          <p style="margin:0; font-size:14.5px; line-height:1.8; max-width:320px">Strategic Account Manager, Mumbai. Systems over heroics — and every metric reproducible.</p>
+        </div>
+        <div data-card data-name="Footer: explore">
+          <h5>Explore</h5>
+          <a href="#about">About</a>
+          <a href="#cv-experience" data-open-acc="cv-experience">Experience</a>
+          <a href="#cv-projects" data-open-acc="cv-projects">Key Projects</a>
+          <a href="#cv-certs" data-open-acc="cv-certs">Certifications</a>
+        </div>
+        <div data-card data-name="Footer: contact">
+          <h5>Contact</h5>
+          <a href="mailto:sougatshekhar97@gmail.com">sougatshekhar97@gmail.com</a>
+          <a href="https://linkedin.com/in/sougat-shekhar-hota">LinkedIn</a>
+          <a href="tel:+917655845685">+91 76558 45685</a>
+          <span style="font-size:14.5px">Mumbai, India</span>
+        </div>
+      </div>
+      <div class="foot-note">
+        <span>© 2026 Sougat Shekhar Hota</span>
         <span>All claims verifiable. Unlike most launch pages.</span>
       </div>
-    </div>
+    </footer>
   </div>
+
 </div>
+
+<script>
+  // Accordion toggles + nav dropdown deep-links (delegated, so editor drafts keep working)
+  document.addEventListener('click', function (e) {
+    var opener = e.target.closest('[data-open-acc]');
+    if (opener) {
+      var acc = document.getElementById(opener.getAttribute('data-open-acc'));
+      if (acc && !acc.classList.contains('open')) toggleAcc(acc, true);
+      return;
+    }
+    var head = e.target.closest('.acc-head');
+    if (head) {
+      // in edit mode, only the chevron toggles — clicks elsewhere edit the text
+      if (document.body.classList.contains('sgp-editing') && !e.target.closest('.acc-chev')) return;
+      toggleAcc(head.closest('.acc'));
+    }
+  });
+  function toggleAcc(acc, forceOpen) {
+    var open = forceOpen === true ? true : !acc.classList.contains('open');
+    acc.classList.toggle('open', open);
+    var head = acc.querySelector('.acc-head');
+    if (head) head.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  // Nav background on scroll
+  window.addEventListener('scroll', function () {
+    var nav = document.getElementById('topnav');
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Reveal-on-scroll transitions (rect-based — no IntersectionObserver dependency;
+  // runs after the editor restores any saved draft)
+  function initReveal() {
+    var els = Array.prototype.slice.call(document.querySelectorAll('.rv'));
+    function check() {
+      els = els.filter(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.92 && r.bottom > 0) {
+          el.classList.add('rv-in');
+          return false;
+        }
+        return true;
+      });
+    }
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      setTimeout(function () { ticking = false; check(); }, 90);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    // accordions expand content into view without a scroll event
+    document.addEventListener('click', function () { setTimeout(check, 350); });
+    check();
+  }
+  if (document.readyState !== 'loading') setTimeout(initReveal, 80);
+  else document.addEventListener('DOMContentLoaded', function () { setTimeout(initReveal, 80); });
+</script>
 
 </body>
 </html>
