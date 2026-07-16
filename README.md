@@ -1,6 +1,6 @@
 # SOUGAT-1 — Portfolio of Sougat Shekhar Hota
 
-Live site: **https://sougatshekhar97-cpu.github.io/portfolio/**
+Live site: **https://sougatshekharhota.github.io/portfolio/**
 
 Built from my Claude Design project:
 
@@ -13,7 +13,7 @@ Built from my Claude Design project:
 Open the site with `#admin` at the end of the URL (or press **Ctrl+Shift+E**):
 
 ```
-https://sougatshekhar97-cpu.github.io/portfolio/#admin
+https://sougatshekharhota.github.io/portfolio/#admin
 ```
 
 First time in a browser it asks you to **set a passcode**; afterwards it asks to enter it.

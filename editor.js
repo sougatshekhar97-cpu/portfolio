@@ -1,5 +1,5 @@
 /*
- * Owner edit mode for sougatshekhar97-cpu.github.io/portfolio
+ * Owner edit mode for sougatshekharhota.github.io/portfolio
  *
  * Activate: add #admin to the URL (or press Ctrl+Shift+E), then enter your passcode.
  * First use on a browser asks you to SET a passcode (stored hashed, in that browser only).
@@ -279,7 +279,7 @@
       '<b>Component controls</b> (hover, top-right): ↑↓ move · ⧉ duplicate · 👁 hide/show · ✕ delete.<br>' +
       '<b>Save draft:</b> keeps changes in <i>this browser only</i> — visitors do not see them.<br>' +
       '<b>Export HTML:</b> downloads the updated file. Publish by replacing it in the GitHub repo ' +
-      '(github.com/sougatshekhar97-cpu/portfolio → open the file → edit/upload → commit), or ask Claude to do it.<br>' +
+      '(github.com/sougatshekharhota/portfolio → open the file → edit/upload → commit), or ask Claude to do it.<br>' +
       '<b>Reset:</b> discards the local draft.<br><br>' +
       '<i>Note: the passcode is a convenience lock for this browser. The public site can only be changed ' +
       'by pushing to the GitHub repo — that is what keeps it yours alone.</i>');
