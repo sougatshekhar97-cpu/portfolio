@@ -475,6 +475,7 @@
       <p class="d-proof"></p>
       <div class="pill-links">
         <a class="open-app" href="#" target="_blank" rel="noopener">Open ↗</a>
+        <a class="open-sample" href="#" target="_blank" rel="noopener">✦ Sample essay ↗</a>
         <a class="open-code ghost" href="#" target="_blank" rel="noopener">Code ↗</a>
       </div>
       <a class="d-next" href="#">
@@ -546,6 +547,7 @@ const WORKS = [
   proof:'18 industries × 8 products × 10 moods · every palette WCAG-AA checked · one-click token &amp; animated-hero export.',
   shot:'assets/shots/kaleido.svg',
   app:'https://sougatshekharhota.github.io/kaleido/',
+  sample:'https://sougatshekharhota.github.io/kaleido/samples/art-and-philosophy.html',
   code:'https://github.com/sougatshekharhota/kaleido'},
  {no:'№ 05', title:'Churn Engine', tag:'Account Health Scoring · Bharti Airtel',
   lede:'Churn down 46% — with a model, not a miracle.',
@@ -757,6 +759,8 @@ function openDetail(i){
   const appA=detail.querySelector('.open-app'),codeA=detail.querySelector('.open-code');
   appA.style.display=p.app?'':'none'; if(p.app) appA.href=p.app;
   codeA.style.display=p.code?'':'none'; if(p.code) codeA.href=p.code;
+  const sampA=detail.querySelector('.open-sample');
+  sampA.style.display=p.sample?'':'none'; if(p.sample) sampA.href=p.sample;
   detail.querySelector('.d-next .nx').textContent=nx.title;
   detail.scrollTop=0; detail.classList.add('open'); $('#d-close').classList.add('on');
   fPrev.classList.remove('on'); Snd.pluck(); Snd.swoosh();
